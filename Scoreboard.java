@@ -17,8 +17,12 @@ public Scoreboard(String one, String two)
     }
     public void recordPlay(int score)
     {
-        if(teamOne.equals(activeTeam)) 
-        teamOneScore += score;
+        if(teamOne.equals(activeTeam)){
+            teamOneScore += score;
+
+        }
+
+
 }
 }
     
