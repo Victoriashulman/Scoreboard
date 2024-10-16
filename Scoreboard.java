@@ -17,21 +17,24 @@ public Scoreboard(String one, String two)
     }
     public void recordPlay(int score)
     {
-        if(score == 0){
-               if (activeTeam.equals(teamOne)) activeTeam = teamTwo;
-                else if(activeTeam.equals(teamTwo)) activeTeam = teamOne;
-        }
-        if(teamOne.equals(activeTeam)){
+        if(teamOne == activeTeam && score > 0){
             teamOneScore += score;    
         }
-        else{
+        else if (teamTwo == activeTeam && score > 0){
             teamTwoScore += score;
         }
+        if(score == 0){
+            if (activeTeam == teamOne){
+                activeTeam = teamTwo;
+            } else if(activeTeam == teamTwo) {
+                activeTeam = teamOne;
+            }
+        }
+    
+
 
 
         }
-
-
         }
         
 
